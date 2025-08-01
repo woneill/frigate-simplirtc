@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -42,7 +42,7 @@ jobs:
           cosign-release: "v2.2.4"
 
       - name: Set up Docker
-        uses: docker/setup-docker-action@v4
+        uses: docker/setup-docker-action@b60f85385d03ac8acfca6d9996982511d8620a19 # v4
         with:
           daemon-config: |
             {
@@ -69,7 +69,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@29109295f81e9208d7d86ff1c6c12d2833863392 # v3
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
